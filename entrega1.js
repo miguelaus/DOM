@@ -222,11 +222,12 @@ function mostrarMenuPizzas(array) {
 		
 		let nuevaPizza = document.createElement("div")
 
-		nuevaPizza.innerHTML = `<div class="card fix" style="width: 18rem;">
+		nuevaPizza.innerHTML = `<div class="card fix my-3" style="width: 15rem;">
 		                  			<img class="card-img-top " src="images/${pizza.imagen}" alt="pasta">
 		                    			<div class="card-body">
 		                      				<h5 class="card-title">${pizza.version}</h5>
 		                      					<p class="card-text">Precio: ${pizza.precio}</p>
+		                      					<p class="card-text">Tamaño de producto: ${pizza.size}</p>
 		                      				<a href="#" class="btn btn-primary ">Comprar</a>
 		                    			</div>
 	                			</div>`
@@ -245,11 +246,12 @@ function mostrarMenuPasta()  {
 	arrayPasta.forEach((pasta)=> {
 
 		let nuevaPasta = document.createElement("div")
-		nuevaPasta.innerHTML = `<div class="card" style="width: 18rem;">
+		nuevaPasta.innerHTML = `<div class="card my-3" style="width: 15rem;">
 		                  			<img class="card-img-top" src="images/${pasta.imagen}" alt="pasta">
-		                    			<div class="card-body">
+		                    			<div class="card-body py-5">
 		                      				<h5 class="card-title">${pasta.version}</h5>
 		                      					<p class="card-text">Precio: ${pasta.precio}</p>
+		                      					<p class="card-text">Tamaño de producto: ${pasta.size}</p>
 		                      				<a href="#" class="btn btn-primary">Comprar</a>
 		                    			</div>
 	                			</div>`
@@ -267,11 +269,12 @@ function mostrarMenuEnsalada () {
 
 		let nuevaEnsalada = document.createElement("div")
 
-		nuevaEnsalada.innerHTML = `<div class="card" style="width: 18rem;">
+		nuevaEnsalada.innerHTML = `<div class="card my-3" style="width: 15rem; height:400px;">
 		                  			<img class="card-img-top" src="images/${ensalada.imagen}" alt="pasta">
 		                    			<div class="card-body">
 		                      				<h5 class="card-title">${ensalada.version}</h5>
 		                      					<p class="card-text">Precio: ${ensalada.precio}</p>
+		                      					<p class="card-text">Tamaño de producto: ${ensalada.size}</p>
 		                      				<a href="#" class="btn btn-primary">Comprar</a>
 		                    			</div>
 	                			</div>`
@@ -292,11 +295,12 @@ function mostrarMenuCarne () {
 
 		let nuevaCarne = document.createElement("div")
 
-		nuevaCarne.innerHTML = `<div class="card" style="width: 18rem;">
+		nuevaCarne.innerHTML = `<div class="card my-3" style="width: 15rem; height: 400px;">
 		                  			<img class="card-img-top" src="images/${carne.imagen}" alt="carne">
 		                    			<div class="card-body">
 		                      				<h5 class="card-title">${carne.version}</h5>
 		                      					<p class="card-text">Precio: ${carne.precio}</p>
+		                      					<p class="card-text">Tamaño de producto: ${carne.size}</p>
 		                      				<a href="#" class="btn btn-primary">Comprar</a>
 		                    			</div>
 	                			</div>`
@@ -316,11 +320,12 @@ function mostrarMenuTragos() {
 
 		let nuevaTragos = document.createElement("div")
 
-		nuevaTragos.innerHTML = `<div class="card" style="width: 18rem;">
+		nuevaTragos.innerHTML = `<div class="card my-3" style="width: 15rem; height: 500px">
 		                  			<img class="card-img-top" src="images/${tragos.imagen}" alt="carne">
 		                    			<div class="card-body">
 		                      				<h5 class="card-title">${tragos.version}</h5>
 		                      					<p class="card-text">Precio: ${tragos.precio}</p>
+		                      					<p class="card-text">Tamaño de producto: ${tragos.size}</p>
 		                      				<a href="#" class="btn btn-primary">Comprar</a>
 		                    			</div>
 	                			</div>`
@@ -343,11 +348,12 @@ function mostrarMenuPostres() {
 
 			let nuevaPostre = document.createElement("div")
 
-			nuevaPostre.innerHTML = `<div class="card" style="width: 18rem;">
+			nuevaPostre.innerHTML = `<div class="card my-3" style="width: 15rem;">
 			                  			<img class="card-img-top" src="images/${postre.imagen}" alt="postre">
 			                    			<div class="card-body">
 			                      				<h5 class="card-title">${postre.version}</h5>
 			                      					<p class="card-text">Precio: ${postre.precio}</p>
+			                      					<p class="card-text">Tamaño de producto: ${postre.size}</p>
 			                      				<a href="#" class="btn btn-primary">Comprar</a>
 			                    			</div>
 		                			</div>`
@@ -369,11 +375,12 @@ function mostrarMenuCafe() {
 
 			let nuevaCafe = document.createElement("div")
 
-			nuevaCafe.innerHTML = `<div class="card" style="width: 18rem;">
+			nuevaCafe.innerHTML = `<div class="card my-3" style="width: 15rem;">
 			                  			<img class="card-img-top" src="images/${cafe.imagen}" alt="postre">
 			                    			<div class="card-body">
 			                      				<h5 class="card-title">${cafe.version}</h5>
 			                      					<p class="card-text">Precio: ${cafe.precio}</p>
+			                      					<p class="card-text">Tamaño de producto: ${cafe.size}</p>
 			                      				<a href="#" class="btn btn-primary">Comprar</a>
 			                    			</div>
 		                			</div>`
