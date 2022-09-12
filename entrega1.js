@@ -215,7 +215,7 @@ let divMenu = document.getElementById("menu")
 
 
 
-function mostrarMenuPizzas() { 
+function mostrarMenuPizzas(array) { 
 	let divPizzas = document.getElementById("pizzas")
 	divPizzas.innerHTML = ""
 	arrayPizzas.forEach((pizza)=>  {
@@ -240,7 +240,7 @@ function mostrarMenuPizzas() {
 function mostrarMenuPasta()  { 
 
 	let divPasta = document.getElementById('pasta')
-	
+	divPasta.innerHTML = ""
 
 	arrayPasta.forEach((pasta)=> {
 
@@ -262,7 +262,7 @@ function mostrarMenuPasta()  {
 
 function mostrarMenuEnsalada () { 
 	let divEnsalada = document.getElementById('ensalada')
-
+	divEnsalada.innerHTML = ""
 	arrayEnsalada.forEach((ensalada)=> {
 
 		let nuevaEnsalada = document.createElement("div")
@@ -287,7 +287,7 @@ function mostrarMenuEnsalada () {
 
 function mostrarMenuCarne () { 
 	let divCarne = document.getElementById('carne')
-
+	divCarne.innerHTML = ""
 	arrayCarne.forEach((carne)=> {
 
 		let nuevaCarne = document.createElement("div")
@@ -311,7 +311,7 @@ function mostrarMenuCarne () {
 
 function mostrarMenuTragos() { 
 	let divTragos = document.getElementById('tragos')
-
+	divTragos.innerHTML = ""
 	arrayTragos.forEach((tragos)=> {
 
 		let nuevaTragos = document.createElement("div")
@@ -338,7 +338,7 @@ function mostrarMenuTragos() {
 
 function mostrarMenuPostres() { 
 		let divPostres = document.getElementById('postres')
-
+		divPostres.innerHTML = ""
 		arrayPostres.forEach((postre)=> {
 
 			let nuevaPostre = document.createElement("div")
@@ -364,7 +364,7 @@ function mostrarMenuPostres() {
 
 function mostrarMenuCafe() { 
 		let divCafe = document.getElementById('cafe')
-
+		divCafe.innerHTML = ""
 		arrayCafe.forEach((cafe)=> {
 
 			let nuevaCafe = document.createElement("div")
@@ -382,6 +382,9 @@ function mostrarMenuCafe() {
 		})
 
 }
+
+
+
 
 
 
