@@ -364,7 +364,7 @@ function mostrarMenuPostres() {
 
 function mostrarMenuCafe() { 
 		let divCafe = document.getElementById('cafe')
-		
+
 		arrayCafe.forEach((cafe)=> {
 
 			let nuevaCafe = document.createElement("div")
@@ -428,7 +428,7 @@ mostrarMenuCafeBtn.addEventListener("click", mostrarMenuCafe)
 let mostrarMenuCompleto = document.getElementById("mostrarMenuBtn")
 
 mostrarMenuCompleto.addEventListener("click", ()=> {
-mostrarMenuCafe()+mostrarMenuPostres()+mostrarMenuTragos()+mostrarMenuCarne()+mostrarMenuPasta()+mostrarMenuPasta()+mostrarMenuPizzas();
+mostrarMenuCafe()+mostrarMenuPostres()+mostrarMenuTragos()+mostrarMenuCarne()+mostrarMenuPasta()+mostrarMenuPizzas();
 })
 
 
