@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- requeried meta tag -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="comida, delivery, online, entrega, food, domicilio, reparto">
+    <meta name="author" content="Rodrigo Miguel Villa">
+    <meta name="description" content="Sitio dedicado a la gestion de pedidos y venta online de comidas">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="entrega1.css">
+
+</head>
+
+
+
+<body>
+  <h1 class="text-center">La trattoria de "La Keku"</h1>
+    <div class="padding">
+      <button id="mostrarMenuBtn" class="my-1 btn btn-primary bg-black padding" type="submit">Menu Completo</button>
+
+
+      <button id="mostrarPizzasBtn" class="my-1 btn btn-primary padding bg-black" type="submit">Menu Pizzas</button>
+
+
+      <button id="mostrarPastaBtn" class="my-1 btn btn-primary  padding bg-black" type="submit">Menu Pasta</button>
+
+
+      <button id="mostrarEnsaladaBtn" class="my-1 btn btn-primary  padding bg-black" type="submit"> Menu Ensalada</button>
+
+
+      <button id="mostrarCarneBtn" class="my-1 btn btn-primary  padding bg-black" type="submit"> Menu Carne</button>
+
+      <button id="mostrarTragosBtn" class="my-1 btn btn-primary  padding bg-black" type="submit">Menu Tragos</button>
+
+
+      <button id="mostrarPostresBtn" class="my-1 btn btn-primary  padding bg-black" type="submit"> Menu Postre</button>
+
+
+      <button id="mostrarCafeBtn" class="my-1 btn btn-primary  padding bg-black" type="submit"> Menu Cafes</button>
+    </div>
+        <div id="menu">  
+          <div class="bg-black d-flex justify-content-around flex-wrap align-items-center " id="pizzas">
+
+          </div>
+
+          <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="pasta">
+
+          </div>
+
+          <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="ensalada">
+
+          </div>
+
+          <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="carne">
+
+          </div>
+
+
+           <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="tragos">
+
+          </div>
+
+
+           <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="postres">
+
+          </div>
+
+
+          <div class="bg-black d-flex justify-content-around flex-wrap align-items-center" id="cafe">
+
+          </div>
+
+
+          <div class="bg-black d-flex" id="menu">
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+<div>
+  <h2 class="text-center">Buscador de platos (introduce palabra clave, ej: "flan")</h2>
+  <form method="get">
+    <label for="busqueda">¿Qué plato quieres buscar?</label>
+    <input type="search" id="busqueda" name="q"/>
+    <input class="myButton" type="submit" value="Buscar plato"/>
+</form> 
+</div>
+
+
+
+<div>
+  <h2 class="text-center">¿Eres nuevo/a cliente?
+    <form>
+      <fieldset>
+        <legend class="py-3">Alta de cliente</legend>
+
+          <label class="inputsStyle" for="nombre">Nombre</label>
+          <input type="text" id="nombre" />
+
+          <label class="inputsStyle" for="apellidos">Apellido</label>
+          <input type="text" id="apellido"/>
+
+          <label class="inputsStyle" for="contrasena">Calle</label>
+          <input type="text" id="calle" />
+
+          <label class="inputsStyle" for="numeracion">Numeracion</label>
+          <input type="text" id="numeracion" />
+
+          <label class="inputsStyle" for="telefono">Telefono</label>
+          <input type="tel" id="telefono"/>
+
+          <input class="myButton" type="submit" value="Darme de alta" />
+      </fieldset>
+    </form>
+</div>
+
+
+
+<script src="entrega1.js">
+</script>
+
+
+</body>
+</html>
