@@ -207,18 +207,15 @@ function buscarPorId() {
 
 }
 
-
-
-function mostrarMenuPizzas(array) { 
+function limpiar() {
 	let divPizzas = document.getElementById("pizzas")
-	divPizzas.innerHTML = ""
-
 	let divPasta = document.getElementById('pasta')
 	let divCafe = document.getElementById("cafe")
 	let divEnsalada = document.getElementById("ensalada")
 	let divTragos = document.getElementById("tragos")
 	let divPostres = document.getElementById("postres")
 	let divCarne = document.getElementById("carne")
+	divPizzas.innerHTML = ""
 	divCafe.innerHTML = ""
 	divEnsalada.innerHTML = ""
 	divTragos.innerHTML = ""
@@ -226,8 +223,14 @@ function mostrarMenuPizzas(array) {
 	divCarne.innerHTML = ""
 	divPasta.innerHTML = ""
 	
+}
 
 
+
+function mostrarMenuPizzas(array) { 
+	limpiar()
+	let divPizzas = document.getElementById("pizzas")
+	
 
 	arrayPizzas.forEach((pizza)=>  {
 		
@@ -250,23 +253,8 @@ function mostrarMenuPizzas(array) {
 
 
 function mostrarMenuPasta(array)  { 
-
+	limpiar()
 	let divPasta = document.getElementById('pasta')
-	divPasta.innerHTML = ""
-
-	let divPizzas = document.getElementById("pizzas")
-	let divCafe = document.getElementById("cafe")
-	let divEnsalada = document.getElementById("ensalada")
-	let divTragos = document.getElementById("tragos")
-	let divPostres = document.getElementById("postres")
-	let divCarne = document.getElementById("carne")
-	divCafe.innerHTML = ""
-	divEnsalada.innerHTML = ""
-	divTragos.innerHTML = ""
-	divPostres.innerHTML = ""
-	divCarne.innerHTML = ""
-	divPizzas.innerHTML = ""
-
 	arrayPasta.forEach((pasta)=> {
 
 		let nuevaPasta = document.createElement("div")
@@ -288,22 +276,8 @@ function mostrarMenuPasta(array)  {
 
 
 function mostrarMenuEnsalada () { 
-	let divEnsalada = document.getElementById('ensalada')
-	divEnsalada.innerHTML = ""
-
-	let divPizzas = document.getElementById("pizzas")
-	let divCafe = document.getElementById("cafe")
-	let divTragos = document.getElementById("tragos")
-	let divPostres = document.getElementById("postres")
-	let divCarne = document.getElementById("carne")
-	let divPasta = document.getElementById('pasta')
-	divPasta.innerHTML = ""
-	divCafe.innerHTML = ""
-	divTragos.innerHTML = ""
-	divPostres.innerHTML = ""
-	divCarne.innerHTML = ""
-	divPizzas.innerHTML = ""
-
+	limpiar()
+	let divEnsalada = document.getElementById("ensalada")
 
 	arrayEnsalada.forEach((ensalada)=> {
 
@@ -329,21 +303,8 @@ function mostrarMenuEnsalada () {
 
 
 function mostrarMenuCarne () { 
-	let divCarne = document.getElementById('carne')
-	divCarne.innerHTML = ""
-
-	let divPizzas = document.getElementById("pizzas")
-	let divCafe = document.getElementById("cafe")
-	let divTragos = document.getElementById("tragos")
-	let divPostres = document.getElementById("postres")
-	let divPasta = document.getElementById('pasta')
-	let divEnsalada = document.getElementById('ensalada')
-	divEnsalada.innerHTML = ""
-	divPasta.innerHTML = ""
-	divCafe.innerHTML = ""
-	divTragos.innerHTML = ""
-	divPostres.innerHTML = ""
-	divPizzas.innerHTML = ""
+	limpiar()
+	let divCarne = document.getElementById("carne")
 
 
 	arrayCarne.forEach((carne)=> {
@@ -369,21 +330,8 @@ function mostrarMenuCarne () {
 
 
 function mostrarMenuTragos() { 
-	let divTragos = document.getElementById('tragos')
-	divTragos.innerHTML = ""
-
-	let divPizzas = document.getElementById("pizzas")
-	let divCafe = document.getElementById("cafe")
-	let divPostres = document.getElementById("postres")
-	let divPasta = document.getElementById('pasta')
-	let divEnsalada = document.getElementById('ensalada')
-	let divCarne = document.getElementById('carne')
-	divCarne.innerHTML = ""
-	divEnsalada.innerHTML = ""
-	divPasta.innerHTML = ""
-	divCafe.innerHTML = ""
-	divPostres.innerHTML = ""
-	divPizzas.innerHTML = ""
+	limpiar()
+	let divTragos = document.getElementById("tragos")
 
 	arrayTragos.forEach((tragos)=> {
 
@@ -411,21 +359,8 @@ function mostrarMenuTragos() {
 
 
 function mostrarMenuPostres() { 
-		let divPostres = document.getElementById('postres')
-		divPostres.innerHTML = ""
-
-		let divPizzas = document.getElementById("pizzas")
-		let divCafe = document.getElementById("cafe")
-		let divPasta = document.getElementById('pasta')
-		let divEnsalada = document.getElementById('ensalada')
-		let divCarne = document.getElementById('carne')
-		let divTragos = document.getElementById('tragos')
-		divTragos.innerHTML = ""
-		divCarne.innerHTML = ""
-		divEnsalada.innerHTML = ""
-		divPasta.innerHTML = ""
-		divCafe.innerHTML = ""
-		divPizzas.innerHTML = ""
+		limpiar()
+		let divPostres = document.getElementById("postres")
 
 
 		arrayPostres.forEach((postre)=> {
@@ -454,22 +389,8 @@ function mostrarMenuPostres() {
 
 
 function mostrarMenuCafe() { 
-		let divCafe = document.getElementById('cafe')
-		divCafe.innerHTML = ""
-
-		let divPizzas = document.getElementById("pizzas")
-		let divPasta = document.getElementById('pasta')
-		let divEnsalada = document.getElementById('ensalada')
-		let divCarne = document.getElementById('carne')
-		let divTragos = document.getElementById('tragos')
-		let divPostres = document.getElementById('postres')
-		divPostres.innerHTML = ""
-		divTragos.innerHTML = ""
-		divCarne.innerHTML = ""
-		divEnsalada.innerHTML = ""
-		divPasta.innerHTML = ""
-		divPizzas.innerHTML = ""
-
+		limpiar()
+		let divCafe = document.getElementById("cafe")
 
 		arrayCafe.forEach((cafe)=> {
 
@@ -536,8 +457,6 @@ mostrarMenuCafeBtn.addEventListener("click", mostrarMenuCafe)
 
 let mostrarMenuCompleto = document.getElementById("mostrarMenuBtn")
 
-mostrarMenuCompleto.addEventListener("click", ()=> {
-mostrarMenuCafe()+mostrarMenuPostres()+mostrarMenuTragos()+mostrarMenuCarne()+mostrarMenuPasta()+mostrarMenuPizzas();
-})
+
 
 
