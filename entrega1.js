@@ -133,27 +133,6 @@ let arrayCafe = [cafeCafe, cafeTe, cafeCapuccino ]
 
 
 
-function buscarPorPlato() {
-	let buscarPlato = prompt("Ingrese el nombre del plato/bebida/postre deseado")
-
-	let platoEncontrado = arrayPizzas.find((Pizza)=>Pizza.version.toLowerCase() == buscarPlato.toLowerCase()) 
-		|| arrayPasta.find((Pasta)=>Pasta.version.toLowerCase() == buscarPlato.toLowerCase()) 
-		|| arrayCarne.find((Carne)=>Carne.version.toLowerCase() == buscarPlato.toLowerCase())
-		|| arrayEnsalada.find((Ensalada)=>Ensalada.version.toLowerCase() == buscarPlato.toLowerCase())
-		|| arrayTragos.find((Tragos)=>Tragos.version.toLowerCase() == buscarPlato.toLowerCase())
-		|| arrayCafe.find((Cafe)=>Cafe.version.toLowerCase() == buscarPlato.toLowerCase())
-		|| arrayPostres.find((Postre)=>Postre.version.toLowerCase() == buscarPlato.toLowerCase())
-
-	if(platoEncontrado == undefined ) {
-		console.log("Su plato no fue encontrado")
-	}else{
-		platoEncontrado.hablar()	
-	}
-
-
-}
-
-
 let arrayMenu = arrayEnsalada.concat(arrayCarne, arrayPasta, arrayPizzas, arrayTragos ,arrayCafe, arrayPostres)
 
 
@@ -206,6 +185,8 @@ function buscarPorId() {
 	}
 
 }
+
+
 
 function limpiar() {
 	let divPizzas = document.getElementById("pizzas")
@@ -459,4 +440,71 @@ let mostrarMenuCompleto = document.getElementById("mostrarMenuBtn")
 
 
 
+let buttonBuscar = document.getElementById("buttonBuscar")
 
+buttonBuscar.addEventListener("click", buscarPorPlato)
+
+
+
+
+function buscarPorPlato() {
+	let buscarPlato = document.getElementById("buscarPlato")
+
+	let platoEncontrado = arrayPizzas.find((Pizza)=>Pizza.version == buscarPlato.value )
+    	||  arrayPasta.find((Pasta)=>Pasta.version == buscarPlato.value )  		
+		||  arrayEnsalada.find((Ensalada)=>Ensalada.version == buscarPlato.value ) 
+		||  arrayCarne.find((Carne)=>Carne.version == buscarPlato.value ) 
+		||  arrayTragos.find((Tragos)=>Tragos.version == buscarPlato.value ) 
+		||  arrayPostres.find((Postre)=>Postre.version == buscarPlato.value ) 
+		||  arrayCafe.find((Cafe)=>Cafe.version == buscarPlato.value ) 
+	
+		if(platoEncontrado == undefined ) {
+			alert("Plato no encontrado en el Menu")
+		}else if(platoEncontrado.toLowerCase() == "margarita" || "caprese" || "primavera"){
+			mostrarMenuPizzas()
+		}else if (platoEncontrado.toLowerCase() == "flan" || "helado" || "fruta") {
+			mostrarMenuPostres()
+		}
+	
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let arrayCliente = []
+
+function cliente(nombre,apellido,calle,numeracion,telefono) {
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.calle = calle;
+	this.numeracion = numeracion;
+	this.telefono = telefono;
+}
+
+function nuevoCliente (array) {
+	let nombreIngresado = document.getElementById("nombre")
+	let apellidoIngresado = document.getElementById("apellido")
+	let calleIngresado = document.getElementById("calle")
+	let numeracionIngresado = document.getElementById("numeracion")
+	let telefonoIngresado = document.getElementById("telefono")
+
+	let clienteCreado = new cliente(nombreIngresado,calleIngresado,numeracionIngresado,telefonoIngresado)
+	array.push(clienteCreado)
+}
+
+function guardarCliente() {
+
+}
