@@ -74,3 +74,10 @@ form input {
 	top:1px;
 }
 
+.buscador {
+	padding: auto;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}

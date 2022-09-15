@@ -454,6 +454,7 @@ buttonBuscar.addEventListener("click", buscarPorPlato)
 
 
 
+
 function buscarPorPlato() {
 	let buscarPlato = document.getElementById("buscarPlato")
 
@@ -464,8 +465,13 @@ function buscarPorPlato() {
 			console.log(arrayPizzas);
 			mostrarMenuPizzas();				
 	}
-	
+
 }
+
+
+
+
+
 
 
 
@@ -495,7 +501,6 @@ function crearCliente(array) {
 
 	let nuevoCliente = new Cliente (nombreCliente.value, apellidoCliente.value,calleCliente.value,numeracionCliente.value,telefonoCliente.value)
 	array.push(nuevoCliente)
-	console.log(array)
 }
 
 
