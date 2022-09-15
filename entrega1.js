@@ -1,5 +1,6 @@
 
 
+
 function Pizza(version,precio,size,id,imagen) {
 	this.version = version;
 	this.precio = precio;
@@ -516,5 +517,3 @@ let clienteNuevo = document.getElementById("clienteNuevo")
 clienteNuevo.addEventListener("click", ()=>{
 	crearCliente(arrayClientes)
 })
-
-
