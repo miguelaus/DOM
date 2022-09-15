@@ -440,9 +440,16 @@ let mostrarMenuCompleto = document.getElementById("mostrarMenuBtn")
 
 
 
+
+
+
 let buttonBuscar = document.getElementById("buttonBuscar")
 
 buttonBuscar.addEventListener("click", buscarPorPlato)
+
+
+
+
 
 
 
@@ -465,3 +472,37 @@ function buscarPorPlato() {
 
 
 
+function Cliente(nombre,apellido,calle,numeracion,telefono) {
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.calle = calle;
+	this.numeracion = numeracion;
+	this.telefono = telefono;
+}
+
+
+
+
+let arrayClientes = []
+
+function crearCliente(array) {
+
+	let nombreCliente = document.getElementById("nombreCliente")
+	let apellidoCliente = document.getElementById("apellidoCliente")
+	let calleCliente = document.getElementById("calleCliente")
+	let numeracionCliente = document.getElementById("numeracionCliente")
+	let telefonoCliente = document.getElementById("telefonoCliente")
+
+	let nuevoCliente = new Cliente (nombreCliente.value, apellidoCliente.value,calleCliente.value,numeracionCliente.value,telefonoCliente.value)
+	array.push(nuevoCliente)
+	console.log(array)
+}
+
+
+
+let buttonCliente = document.getElementById("buttonAltaCliente")
+
+buttonCliente.addEventListener ("clicK", () =>{ crearCliente(arrayClientes)
+})
+
+console.log(arrayClientes)
