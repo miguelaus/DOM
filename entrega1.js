@@ -474,10 +474,6 @@ function buscarPorPlato() {
 
 
 
-
-
-
-
 function Cliente(nombre,apellido,calle,numeracion,telefono) {
 	this.nombre = nombre;
 	this.apellido = apellido;
@@ -485,11 +481,19 @@ function Cliente(nombre,apellido,calle,numeracion,telefono) {
 	this.numeracion = numeracion;
 	this.telefono = telefono;
 }
-
-
+	let nombreCliente = document.getElementById("nombreCliente")
+	let apellidoCliente = document.getElementById("apellidoCliente")
+	let calleCliente = document.getElementById("calleCliente")
+	let numeracionCliente = document.getElementById("numeracionCliente")
+	let telefonoCliente = document.getElementById("telefonoCliente")
 
 
 let arrayClientes = []
+
+
+
+
+
 
 function crearCliente(array) {
 
@@ -499,15 +503,18 @@ function crearCliente(array) {
 	let numeracionCliente = document.getElementById("numeracionCliente")
 	let telefonoCliente = document.getElementById("telefonoCliente")
 
-	let nuevoCliente = new Cliente (nombreCliente.value, apellidoCliente.value,calleCliente.value,numeracionCliente.value,telefonoCliente.value)
+	let nuevoCliente = new Cliente (nombreCliente.value, apellidoCliente.value, calleCliente.value, numeracionCliente.value, telefonoCliente.value)
 	array.push(nuevoCliente)
+
+	console.log(array)
 }
 
 
 
-let buttonCliente = document.getElementById("buttonAltaCliente")
+let clienteNuevo = document.getElementById("clienteNuevo")
 
-buttonCliente.addEventListener ("clicK", () =>{ crearCliente(arrayClientes)
+clienteNuevo.addEventListener("click", ()=>{
+	crearCliente(arrayClientes)
 })
 
-console.log(arrayClientes)
+

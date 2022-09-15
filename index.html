@@ -90,10 +90,9 @@
 <div >
   <h2 class="text-center">Buscador de platos (introduce palabra clave, ej: "flan")</h2>
    <div class="buscador py-2">
-      <label >¿Qué plato quieres buscar?</label>
+      <label>¿Qué plato quieres buscar?</label>
       <input class="h-50 mx-2 my-2"type="text" id="buscarPlato"/>
-      <input class="myButton" id="buttonBuscar" type="submit" value="Buscar plato"/>
-
+      <button id="buttonBuscar" class="border"> Buscar Plato </button>
 
 
             <div class="bg-black d-flex justify-content-around flex-wrap align-items-center  " id="pizzas2">
@@ -110,32 +109,27 @@
 
 <div>
   <h2 class="text-center">¿Eres nuevo/a cliente?
-    <form>
-      <fieldset>
-        <legend class="py-3">Alta de cliente</legend>
+    
+      
 
           <label class="inputsStyle" for="nombre">Nombre</label>
-          <input type="text" id="nombreCliente" />
+          <input type="text" placeholder="Ana Maria" id="nombreCliente" />
 
           <label class="inputsStyle" for="apellidos">Apellido</label>
-          <input type="text" id="apellidoCliente"/>
+          <input type="text" placeholder="Garcia" id="apellidoCliente"/>
 
-          <label class="inputsStyle" for="contrasena">Calle</label>
-          <input type="text" id="calleCliente" />
+          <label class="inputsStyle" for="calle">Calle</label>
+          <input type="text" placeholder="Avenida San Martin" id="calleCliente" />
 
           <label class="inputsStyle" for="numeracion">Numeracion</label>
-          <input type="text" id="numeracionCliente" />
+          <input type="text" placeholder="1214"id="numeracionCliente" />
 
           <label class="inputsStyle" for="telefono">Telefono</label>
-          <input type="tel" id="telefonoCliente"/>
+          <input type="tel" placeholder="1559229292" id="telefonoCliente"/>
 
-          <input class="myButton" id="buttonAltaCliente" type="submit" value="Darme de alta" />
-      </fieldset>
-    </form>
-</div>
+          <button class="my-3 border py-2" id="clienteNuevo">Cliente Nuevo</button>
 
-
-
+      
 <script src="entrega1.js">
 </script>
 
