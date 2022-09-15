@@ -11,9 +11,9 @@ function Pizza(version,precio,size,id,imagen) {
 }
 
 
-const pizzaMargarita = new Pizza("Margarita", 550, "mediana", 1, "margarita.jpg")
-const pizzaPrimavera = new Pizza("Primavera" , 600, "mediana",2, "primavera.jpg")
-const pizzaCaprese = new Pizza("Caprese", 650, "grande",3, "caprese.jpg")
+const pizzaMargarita = new Pizza("margarita", 550, "mediana", 1, "margarita.jpg")
+const pizzaPrimavera = new Pizza("primavera" , 600, "mediana",2, "primavera.jpg")
+const pizzaCaprese = new Pizza("caprese", 650, "grande",3, "caprese.jpg")
 
 let arrayPizzas =[pizzaCaprese, pizzaPrimavera, pizzaMargarita]
 
@@ -49,9 +49,9 @@ function Ensalada(version,precio,size,id,imagen) {
 	this.idFuction = function () {console.log ("Su plato es: Ensalada " + this.version)}
 }
 
-const ensaladaTomateLechuga = new Ensalada('Tomate y Lechuga', 750, "mediana",7,"tomatelechuga.jpg");
+const ensaladaTomateLechuga = new Ensalada('tomate y lechuga', 750, "mediana",7,"tomatelechuga.jpg");
 const ensaladaCesar = new Ensalada('cesar', 800, "mediana",8,"cesar.jpg");
-const ensaladaPapaHuevo = new Ensalada('Papa y Huevo', 800, "mediana",9,"papahuevo.jpg");
+const ensaladaPapaHuevo = new Ensalada('papa y huevo', 800, "mediana",9,"papahuevo.jpg");
 
 let arrayEnsalada = [ensaladaCesar, ensaladaPapaHuevo, ensaladaTomateLechuga] 
 
@@ -450,24 +450,14 @@ buttonBuscar.addEventListener("click", buscarPorPlato)
 function buscarPorPlato() {
 	let buscarPlato = document.getElementById("buscarPlato")
 
-	let platoEncontrado = arrayPizzas.find((Pizza)=>Pizza.version == buscarPlato.value )
-    	||  arrayPasta.find((Pasta)=>Pasta.version == buscarPlato.value )  		
-		||  arrayEnsalada.find((Ensalada)=>Ensalada.version == buscarPlato.value ) 
-		||  arrayCarne.find((Carne)=>Carne.version == buscarPlato.value ) 
-		||  arrayTragos.find((Tragos)=>Tragos.version == buscarPlato.value ) 
-		||  arrayPostres.find((Postre)=>Postre.version == buscarPlato.value ) 
-		||  arrayCafe.find((Cafe)=>Cafe.version == buscarPlato.value ) 
+	let platoEncontrado = arrayMenu.find((Pizza)=>Pizza.version == buscarPlato.value )
+	if(platoEncontrado == undefined ) {
+		alert("Plato no encontrado en el Menu")
+		}else if(platoEncontrado == "margarita" || "primavera" || "caprese" ){
+			console.log(arrayPizzas);
+			mostrarMenuPizzas();				
+	}
 	
-		if(platoEncontrado == undefined ) {
-			alert("Plato no encontrado en el Menu")
-		}else if(platoEncontrado.toLowerCase() == "margarita" || "caprese" || "primavera"){
-			mostrarMenuPizzas()
-		}else if (platoEncontrado.toLowerCase() == "flan" || "helado" || "fruta") {
-			mostrarMenuPostres()
-		}
-	
-
-
 }
 
 
@@ -475,36 +465,3 @@ function buscarPorPlato() {
 
 
 
-
-
-
-
-
-
-
-
-
-let arrayCliente = []
-
-function cliente(nombre,apellido,calle,numeracion,telefono) {
-	this.nombre = nombre;
-	this.apellido = apellido;
-	this.calle = calle;
-	this.numeracion = numeracion;
-	this.telefono = telefono;
-}
-
-function nuevoCliente (array) {
-	let nombreIngresado = document.getElementById("nombre")
-	let apellidoIngresado = document.getElementById("apellido")
-	let calleIngresado = document.getElementById("calle")
-	let numeracionIngresado = document.getElementById("numeracion")
-	let telefonoIngresado = document.getElementById("telefono")
-
-	let clienteCreado = new cliente(nombreIngresado,calleIngresado,numeracionIngresado,telefonoIngresado)
-	array.push(clienteCreado)
-}
-
-function guardarCliente() {
-
-}
