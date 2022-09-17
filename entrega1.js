@@ -462,7 +462,7 @@ buttonBuscar.addEventListener("click", buscarPorPlato )
 function buscarPorPlato() {
 	let buscarPlato = document.getElementById("buscarPlato")
 
-	switch (buscarPlato.value) {
+	switch (buscarPlato.value.toLowerCase()) {
 
 	case "margarita":
 	mostrarMenuPizzas();
