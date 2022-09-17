@@ -612,5 +612,6 @@ let clienteNuevo = document.getElementById("clienteNuevo")
 
 clienteNuevo.addEventListener("click", ()=>{
 	crearCliente(arrayClientes);
+	alert("Felicidades! Ya eres cliente registrado. Tu codigo de cliente es: ");
 })
 
