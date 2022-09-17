@@ -157,6 +157,8 @@ function buscarPorPrecio() {
 
 
 
+
+
 function mostrarMenu() {
 	for (Pizza of arrayPizzas) {Pizza.hablar();}
 	for (Pasta of arrayPasta) {Pasta.hablar();}
@@ -446,7 +448,8 @@ let mostrarMenuCompleto = document.getElementById("mostrarMenuBtn")
 
 let buttonBuscar = document.getElementById("buttonBuscar")
 
-buttonBuscar.addEventListener("click", buscarPorPlato)
+buttonBuscar.addEventListener("click", buscarPorPlato )
+
 
 
 
@@ -459,16 +462,108 @@ buttonBuscar.addEventListener("click", buscarPorPlato)
 function buscarPorPlato() {
 	let buscarPlato = document.getElementById("buscarPlato")
 
-	let platoEncontrado = arrayMenu.find((Pizza)=>Pizza.version == buscarPlato.value )
-	if(platoEncontrado == undefined ) {
-		alert("Plato no encontrado en el Menu")
-		}else if(platoEncontrado == "margarita" || "primavera" || "caprese" ){
-			console.log(arrayPizzas);
-			mostrarMenuPizzas();				
+	switch (buscarPlato.value) {
+
+	case "margarita":
+	mostrarMenuPizzas();
+	break;
+
+	case "primavera":
+	mostrarMenuPizzas();
+	break;
+
+	case "caprese":
+	mostrarMenuPizzas();
+	break;
+
+	case "flan" :
+	mostrarMenuPostres();
+	break; 
+
+	case "helado":
+	mostrarMenuPostres();
+	break; 
+
+	case "fruta":
+	mostrarMenuPostres();
+	break; 
+
+	case "vacio" :
+	mostrarMenuCarne();
+	break;
+
+	case "hamburguesa":
+	mostrarMenuCarne();
+	break; 
+
+	case  "bife" :
+	mostrarMenuCarne();
+	break; 
+
+	case  "chorizo" :
+	mostrarMenuCarne();
+	break;  
+
+	case "asado" :
+	mostrarMenuCarne();
+	break; 
+
+	case "pasta":
+	mostrarMenuPasta();
+	break;
+
+	case "ravioles":
+	mostrarMenuPasta();
+	break;
+
+	case "macarrones":
+	mostrarMenuPasta();
+	break;
+
+	case "vino":
+	mostrarMenuTragos();
+	break;
+
+	case "cerveza":
+	mostrarMenuTragos();
+	break;
+
+	case "refresco":
+	mostrarMenuTragos();
+	break;
+
+	case "cesar":
+	mostrarMenuEnsalada();
+	break;
+
+	case "tomate y lechuga":
+	mostrarMenuEnsalada();
+	break;
+
+	case "papa y huevo":
+	mostrarMenuEnsalada();
+	break;
+
+	case "lechuga y tomate":
+	mostrarMenuEnsalada();
+	break;
+
+	case "cafe":
+	mostrarMenuCafe();
+	break;
+
+	case "capuccino":
+	mostrarMenuCafe();
+	break;
+
+	case "te":
+	mostrarMenuCafe();
+	break;
+
+	default:
+	buscarPlato = alert("No se ha encontrado el plato en nuestro menu")
 	}
-
 }
-
 
 
 
@@ -481,6 +576,7 @@ function Cliente(nombre,apellido,calle,numeracion,telefono) {
 	this.calle = calle;
 	this.numeracion = numeracion;
 	this.telefono = telefono;
+
 }
 	let nombreCliente = document.getElementById("nombreCliente")
 	let apellidoCliente = document.getElementById("apellidoCliente")
@@ -515,5 +611,6 @@ function crearCliente(array) {
 let clienteNuevo = document.getElementById("clienteNuevo")
 
 clienteNuevo.addEventListener("click", ()=>{
-	crearCliente(arrayClientes)
+	crearCliente(arrayClientes);
 })
+
